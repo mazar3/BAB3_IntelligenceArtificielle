@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[backend=biber, style=ieee]{biblatex}
+\addbibresource{data/tex/references.bib}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\geometry{hmargin=2.5cm, vmargin=3cm}
+
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+\usemintedstyle{friendly}
+
+\begin{document}
+	
+	\begin{titlepage}
+		\begin{center}
+			\includegraphics[width=5cm]{data/tex/logo.png}\vspace{1cm}
+			
+			\textsc{\LARGE Université de Mons} \vspace{0.5cm}\\
+			\textsc{\Large Faculté Polytechnique} \vspace{1.5cm}\\
+			\textsc{\large Cours d'intelligence artificielle} \vspace{2cm}
+			
+			% Titre du rapport
+			\hrule height 0.5mm \vspace{0.4cm}
+			{\Huge \bfseries Systèmes multi-agents} \vspace{0.4cm}
+			\hrule height 0.5mm \vspace{1.5cm}
+			
+			% Auteurs du rapport
+			\begin{minipage}{0.8\textwidth}
+				\begin{flushleft} \large
+					\textbf{Auteur :} Maximilien Zarioh \\[0.2cm]
+					\textbf{Professeur :} Sidi Mahmoudi
+				\end{flushleft}
+			\end{minipage}
+			
+			% Bas de la page
+			\vfill
+			\large \today
+		\end{center}
+	\end{titlepage}
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	Dans la vidéo \cite{youtube_video}, l'auteur présente la création d'un système multi-agents utilisant des modèles de langage de grande échelle (LLMs) pour générer automatiquement des newsletters. Ce système, construit avec la plateforme FlowiseAI, démontre comment des agents spécialisés peuvent collaborer pour accomplir une tâche complexe de manière autonome. L'objectif de cette analyse est de décrire l'objectif de ce système, d'expliquer le rôle des LLMs dans son fonctionnement, et d'établir les liens entre ce système multi-agents et les méthodes d'apprentissage.
+	
+	\section{Objectif du système multi-agents}
+	Le système multi-agents a pour objectif principal d'automatiser la création d'une newsletter sur un sujet donné, en décomposant le processus en sous-tâches spécifiques confiées à des agents IA spécialisés. Chaque agent joue un rôle distinct dans la production de la newsletter :
+	\begin{itemize}
+		\item \textbf{Analyste de contenu} : Recherche et collecte des informations pertinentes sur le sujet à partir de sources en ligne (Wikipédia, GitHub, web).
+		\item \textbf{Rédacteur} : Rédige un article structuré à partir des données fournies par l'analyste.
+		\item \textbf{Designer} : Met en forme le contenu rédigé en ajoutant des éléments visuels (émoticônes, mises en gras, figures, liens, etc.) pour améliorer la lisibilité.
+		\item \textbf{Rédacteur en chef (superviseur)} : Orchestre le travail des autres agents, supervise le processus, demande des ajustements si nécessaire et valide le contenu final.
+	\end{itemize}
+	
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[
+			agent/.style={rectangle, draw=blue!50, fill=blue!20, thick, minimum width=2cm},
+			interaction/.style={-Stealth, thick}]
+			
+			\node[agent] (analyste) {Analyste};
+			\node[agent, right=3cm of analyste] (redacteur) {Rédacteur};
+			\node[agent, below=2cm of redacteur] (designer) {Designer};
+			\node[agent, right=3cm of redacteur] (chef) {Rédacteur en chef};
+			
+			\draw[interaction] (analyste) -- node[above] {Données brutes} (redacteur);
+			\draw[interaction] (redacteur) -- node[left] {Contenu structuré} (designer);
+			\draw[interaction] (designer) -- node[below right] {Maquette finale} (chef);
+			\draw[interaction, dashed,{Stealth}-{Stealth}] (chef) to[out=180,in=0] node[above] {Feedback} (redacteur);
+			
+		\end{tikzpicture}
+		\caption{Diagramme d'interaction entre les agents}
+		\label{fig:interaction}
+	\end{figure}
+	Ce système permet de générer une newsletter de haute qualité en quelques minutes, en exploitant la collaboration et l'expertise de chaque agent.
+	
+	\section{Rôle des LLMs dans ces systèmes multi-agents}
+	Les LLMs, tels que les GPT d'OpenAI, sont au cœur du fonctionnement de ce système multi-agents. Chaque agent repose sur un LLM configuré avec un prompt spécifique qui définit son rôle et ses responsabilités. Les LLMs contribuent de plusieurs manières :
+	\begin{itemize}
+		\item \textbf{Compréhension et génération de texte} : Les agents utilisent les LLMs pour comprendre les instructions (e.g. le sujet de la newsletter) et générer du texte adapté à leur tâche.
+		\item \textbf{Communication entre agents} : Les agents échangent des informations via des messages textuels générés par les LLMs, permettant une collaboration fluide.
+		\item \textbf{Spécialisation} : Grâce aux prompts, un même LLM peut être adapté à des tâches différentes (recherche, rédaction, design), offrant une flexibilité tout en exploitant une base commune de capacités linguistiques.
+		\item \textbf{Itération} : Les LLMs facilitent les boucles de rétroaction, permettant par exemple au rédacteur en chef de demander des ajustements au rédacteur, qui modifie le contenu en conséquence.
+	\end{itemize}
+	Ainsi, les LLMs rendent les agents autonomes, communicatifs et spécialisés, garantissant une collaboration efficace sans intervention humaine directe.
+		
+	\section{Lien entre les systèmes multi-agents et les méthodes d'apprentissage}
+	Le système multi-agents présenté partage plusieurs similitudes avec des méthodes d'apprentissage, notamment dans son approche collaborative et itérative :
+	\begin{itemize}
+		\item \textbf{Apprentissage collaboratif} : Les agents travaillent ensemble, partageant des informations pour atteindre un objectif commun, à l'image de l'apprentissage collaboratif où des entités combinent leurs connaissances pour résoudre un problème.
+		\item \textbf{Apprentissage par renforcement (potentiel)} : Bien que non détaillé dans la vidéo, un tel système pourrait intégrer l'apprentissage par renforcement, où les agents ajustent leurs actions en fonction de retours pour optimiser leurs performances.
+		\item \textbf{Spécialisation et division du travail} : Comme dans certaines méthodes d'apprentissage, chaque agent se concentre sur une tâche spécifique, contribuant à une solution globale plus robuste.
+		\item \textbf{Approche itérative} : Le processus d'itération entre agents (e.g. demandes d'ajustements par le rédacteur en chef) reflète l'apprentissage itératif des modèles d'IA, où les résultats sont affinés progressivement.
+	\end{itemize}
+	Ces parallèles illustrent comment les systèmes multi-agents peuvent s'inspirer des principes d'apprentissage pour résoudre des tâches complexes de manière autonome et adaptative.
+	
+	\section{Conclusion}
+	Le projet présenté démontre l'efficacité d'un système multi-agents basé sur des LLMs pour automatiser la création de newsletters. En décomposant la tâche en sous-tâches spécialisées et en permettant une collaboration itérative entre agents, ce système produit des résultats de haute qualité rapidement et sans intervention humaine. Les similitudes avec les méthodes d'apprentissage, telles que l'apprentissage collaboratif et itératif, soulignent le potentiel de ces systèmes pour des applications plus larges et complexes.
+	
+	\newpage
+	\section{Bibliographie}
+	\printbibliography[heading=subbibliography, type=article, title={Articles de revues}]
+	\printbibliography[heading=subbibliography, type=book, title={Livres}]
+	\printbibliography[heading=subbibliography, type=booklet, title={Livrets}]
+	\printbibliography[heading=subbibliography, type=inbook, title={Chapitres de livres}]
+	\printbibliography[heading=subbibliography, type=incollection, title={Articles dans une collection}]
+	\printbibliography[heading=subbibliography, type=inproceedings, title={Actes de conférences}]
+	\printbibliography[heading=subbibliography, type=manual, title={Manuels}]
+	\printbibliography[heading=subbibliography, type=mastersthesis, title={Mémoires de Master}]
+	\printbibliography[heading=subbibliography, type=phdthesis, title={Thèses de doctorat}]
+	\printbibliography[heading=subbibliography, type=proceedings, title={Actes de conférences (livre des actes)}]
+	\printbibliography[heading=subbibliography, type=techreport, title={Rapports techniques}]
+	\printbibliography[heading=subbibliography, type=unpublished, title={Manuscrits non publiés}]
+	\printbibliography[heading=subbibliography, type=misc, title={Références diverses}]
+	\printbibliography[heading=subbibliography, type=online, title={Pages Web}]
+	\printbibliography[heading=subbibliography, type=patent, title={Brevets}]
+	\printbibliography[heading=subbibliography, type=standard, title={Normes}]
+\end{document}

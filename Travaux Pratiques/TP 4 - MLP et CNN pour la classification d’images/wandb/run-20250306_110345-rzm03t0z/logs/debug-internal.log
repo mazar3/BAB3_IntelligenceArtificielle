@@ -1,0 +1,18 @@
+{"time":"2025-03-06T11:03:45.1494288+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"wandb\\run-20250306_110345-rzm03t0z\\logs\\debug-core.log"}
+{"time":"2025-03-06T11:03:45.2597389+01:00","level":"INFO","msg":"created new stream","id":"rzm03t0z"}
+{"time":"2025-03-06T11:03:45.2597389+01:00","level":"INFO","msg":"stream: started","id":"rzm03t0z"}
+{"time":"2025-03-06T11:03:45.2597389+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"rzm03t0z"}
+{"time":"2025-03-06T11:03:45.2597389+01:00","level":"INFO","msg":"handler: started","stream_id":"rzm03t0z"}
+{"time":"2025-03-06T11:03:45.2597389+01:00","level":"INFO","msg":"sender: started","stream_id":"rzm03t0z"}
+{"time":"2025-03-06T11:03:45.7352832+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T11:12:00.517538+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-06T11:12:00.5430143+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-06T11:12:01.9850257+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T11:12:01.9850257+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T11:12:03.0020532+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading output.log","runtime_seconds":0.5852078,"progress":"21.6KB/21.6KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.5852078,"progress":"321B/321B"},{"desc":"uploading config.yaml","runtime_seconds":0.3981472,"progress":"1.8KB/1.8KB"}],"total_operations":3}}
+{"time":"2025-03-06T11:12:03.1306311+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T11:12:04.4109136+01:00","level":"INFO","msg":"stream: closing","id":"rzm03t0z"}
+{"time":"2025-03-06T11:12:04.4109136+01:00","level":"INFO","msg":"handler: closed","stream_id":"rzm03t0z"}
+{"time":"2025-03-06T11:12:04.4109136+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rzm03t0z"}
+{"time":"2025-03-06T11:12:04.4109136+01:00","level":"INFO","msg":"sender: closed","stream_id":"rzm03t0z"}
+{"time":"2025-03-06T11:12:04.4109136+01:00","level":"INFO","msg":"stream: closed","id":"rzm03t0z"}

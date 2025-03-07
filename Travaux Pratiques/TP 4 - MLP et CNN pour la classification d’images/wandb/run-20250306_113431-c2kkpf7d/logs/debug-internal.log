@@ -1,0 +1,20 @@
+{"time":"2025-03-06T11:34:31.0276671+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"wandb\\run-20250306_113431-c2kkpf7d\\logs\\debug-core.log"}
+{"time":"2025-03-06T11:34:31.140137+01:00","level":"INFO","msg":"created new stream","id":"c2kkpf7d"}
+{"time":"2025-03-06T11:34:31.1406766+01:00","level":"INFO","msg":"stream: started","id":"c2kkpf7d"}
+{"time":"2025-03-06T11:34:31.1406766+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"c2kkpf7d"}
+{"time":"2025-03-06T11:34:31.1406766+01:00","level":"INFO","msg":"sender: started","stream_id":"c2kkpf7d"}
+{"time":"2025-03-06T11:34:31.1406766+01:00","level":"INFO","msg":"handler: started","stream_id":"c2kkpf7d"}
+{"time":"2025-03-06T11:34:31.6850278+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T11:34:32.2323142+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-06T11:36:52.4960938+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-06T11:40:31.9586752+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-06T11:40:31.9817871+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-06T11:40:33.7742984+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T11:40:33.7742984+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T11:40:34.7811115+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact model-c2kkpf7d","runtime_seconds":2.8250056,"subtasks":[{"desc":"model.ckpt","runtime_seconds":2.1040276,"progress":"3.6MB/8.0MB"}]},{"desc":"uploading output.log","runtime_seconds":0.4591487,"progress":"24.3KB/24.3KB"},{"desc":"uploading wandb-summary.json","runtime_seconds":0.4591487,"progress":"322B/322B"},{"desc":"uploading config.yaml","runtime_seconds":0.0549958,"progress":"1.8KB/1.8KB"}],"total_operations":4}}
+{"time":"2025-03-06T11:40:37.7165335+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T11:40:38.9761853+01:00","level":"INFO","msg":"stream: closing","id":"c2kkpf7d"}
+{"time":"2025-03-06T11:40:38.9761853+01:00","level":"INFO","msg":"handler: closed","stream_id":"c2kkpf7d"}
+{"time":"2025-03-06T11:40:38.9761853+01:00","level":"INFO","msg":"sender: closed","stream_id":"c2kkpf7d"}
+{"time":"2025-03-06T11:40:38.9761853+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"c2kkpf7d"}
+{"time":"2025-03-06T11:40:38.9761853+01:00","level":"INFO","msg":"stream: closed","id":"c2kkpf7d"}

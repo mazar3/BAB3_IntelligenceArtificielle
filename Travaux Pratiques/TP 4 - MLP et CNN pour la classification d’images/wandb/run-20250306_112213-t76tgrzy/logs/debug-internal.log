@@ -1,0 +1,18 @@
+{"time":"2025-03-06T11:22:13.8246386+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"wandb\\run-20250306_112213-t76tgrzy\\logs\\debug-core.log"}
+{"time":"2025-03-06T11:22:13.9346677+01:00","level":"INFO","msg":"created new stream","id":"t76tgrzy"}
+{"time":"2025-03-06T11:22:13.9346677+01:00","level":"INFO","msg":"stream: started","id":"t76tgrzy"}
+{"time":"2025-03-06T11:22:13.9346677+01:00","level":"INFO","msg":"handler: started","stream_id":"t76tgrzy"}
+{"time":"2025-03-06T11:22:13.9346677+01:00","level":"INFO","msg":"sender: started","stream_id":"t76tgrzy"}
+{"time":"2025-03-06T11:22:13.9346677+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"t76tgrzy"}
+{"time":"2025-03-06T11:22:14.3941195+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-06T11:24:02.9703046+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-03-06T11:24:02.9935728+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-03-06T11:24:04.4350666+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-06T11:24:04.4350666+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-06T11:24:05.4398127+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact model-t76tgrzy","runtime_seconds":2.4722425},{"desc":"uploading wandb-summary.json","runtime_seconds":0.4566134,"progress":"317B/317B"},{"desc":"uploading output.log","runtime_seconds":0.4566134,"progress":"11.2KB/11.2KB"},{"desc":"uploading config.yaml","runtime_seconds":0.2799113,"progress":"1.8KB/1.8KB"}],"total_operations":4}}
+{"time":"2025-03-06T11:24:06.3770981+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-06T11:24:07.6472849+01:00","level":"INFO","msg":"stream: closing","id":"t76tgrzy"}
+{"time":"2025-03-06T11:24:07.6472849+01:00","level":"INFO","msg":"handler: closed","stream_id":"t76tgrzy"}
+{"time":"2025-03-06T11:24:07.6472849+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"t76tgrzy"}
+{"time":"2025-03-06T11:24:07.6472849+01:00","level":"INFO","msg":"sender: closed","stream_id":"t76tgrzy"}
+{"time":"2025-03-06T11:24:07.6472849+01:00","level":"INFO","msg":"stream: closed","id":"t76tgrzy"}

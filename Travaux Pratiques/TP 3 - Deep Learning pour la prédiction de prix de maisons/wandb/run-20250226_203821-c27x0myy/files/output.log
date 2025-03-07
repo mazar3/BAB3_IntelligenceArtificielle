@@ -1,0 +1,13 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name    | Type                | Params | Mode
+--------------------------------------------------------
+0 | model   | MLPModelSingleLayer | 20     | train
+1 | loss_fn | MSELoss             | 0      | train
+--------------------------------------------------------
+20        Trainable params
+0         Non-trainable params
+20        Total params
+0.000     Total estimated model params size (MB)
+3         Modules in train mode
+0         Modules in eval mode

@@ -1,0 +1,20 @@
+{"time":"2025-02-26T19:59:25.6074879+01:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"wandb\\run-20250226_195925-9t0or49g\\logs\\debug-core.log"}
+{"time":"2025-02-26T19:59:25.7229258+01:00","level":"INFO","msg":"created new stream","id":"9t0or49g"}
+{"time":"2025-02-26T19:59:25.7229258+01:00","level":"INFO","msg":"stream: started","id":"9t0or49g"}
+{"time":"2025-02-26T19:59:25.7229258+01:00","level":"INFO","msg":"handler: started","stream_id":"9t0or49g"}
+{"time":"2025-02-26T19:59:25.7229258+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"9t0or49g"}
+{"time":"2025-02-26T19:59:25.7229258+01:00","level":"INFO","msg":"sender: started","stream_id":"9t0or49g"}
+{"time":"2025-02-26T19:59:26.2354282+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-26T19:59:42.5297295+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-02-26T19:59:42.5350554+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-02-26T19:59:42.5364662+01:00","level":"INFO","msg":"Pausing system monitor"}
+{"time":"2025-02-26T19:59:42.5653582+01:00","level":"INFO","msg":"Resuming system monitor"}
+{"time":"2025-02-26T19:59:42.648752+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-26T19:59:42.6494334+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-26T19:59:43.6572947+01:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading artifact model-9t0or49g","runtime_seconds":1.1303305}],"total_operations":1}}
+{"time":"2025-02-26T19:59:44.1342202+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-26T19:59:45.4113802+01:00","level":"INFO","msg":"stream: closing","id":"9t0or49g"}
+{"time":"2025-02-26T19:59:45.4113802+01:00","level":"INFO","msg":"handler: closed","stream_id":"9t0or49g"}
+{"time":"2025-02-26T19:59:45.4113802+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"9t0or49g"}
+{"time":"2025-02-26T19:59:45.4113802+01:00","level":"INFO","msg":"sender: closed","stream_id":"9t0or49g"}
+{"time":"2025-02-26T19:59:45.4113802+01:00","level":"INFO","msg":"stream: closed","id":"9t0or49g"}

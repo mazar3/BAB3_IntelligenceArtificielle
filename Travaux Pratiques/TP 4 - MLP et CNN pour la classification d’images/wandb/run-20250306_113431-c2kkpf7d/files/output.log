@@ -1,0 +1,136 @@
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name      | Type               | Params | Mode
+---------------------------------------------------------
+0 | model     | CNNModel           | 23.4 K | train
+1 | train_acc | MulticlassAccuracy | 0      | train
+2 | val_acc   | MulticlassAccuracy | 0      | train
+3 | test_acc  | MulticlassAccuracy | 0      | train
+---------------------------------------------------------
+23.4 K    Trainable params
+0         Non-trainable params
+23.4 K    Total params
+0.093     Total estimated model params size (MB)
+8         Modules in train mode
+0         Modules in eval mode
+<xml><var name="_dummy_ipython_val"  />
+<var name="_dummy_special_var"  />
+<var name="ACCELERATOR" type="str" qualifier="builtins" value="auto" />
+<var name="Accuracy" type="ABCMeta" qualifier="abc" value="%3Cclass %27torchmetrics.classification.accuracy.Accuracy%27&gt;" isContainer="True" />
+<var name="BATCH_SIZE" type="int" qualifier="builtins" value="64" />
+<var name="CSVLogger" type="ABCMeta" qualifier="abc" value="%3Cclass %27pytorch_lightning.loggers.csv_logs.CSVLogger%27&gt;" isContainer="True" />
+<var name="DATA_DIR" type="str" qualifier="builtins" value="." />
+<var name="EPOCHS" type="int" qualifier="builtins" value="20" />
+<var name="LOG_DIR" type="str" qualifier="builtins" value="logs/" />
+<var name="LR" type="NoneType" qualifier="builtins" value="None" />
+<var name="MulticlassAccuracy" type="ABCMeta" qualifier="abc" value="%3Cclass %27torchmetrics.classification.accuracy.MulticlassAccuracy%27&gt;" isContainer="True" />
+<var name="MulticlassConfusionMatrix" type="ABCMeta" qualifier="abc" value="%3Cclass %27torchmetrics.classification.confusion_matrix.MulticlassConfusionMatrix%27&gt;" isContainer="True" />
+<var name="NUM_CLASSES" type="int" qualifier="builtins" value="10" />
+<var name="TensorBoardLogger" type="ABCMeta" qualifier="abc" value="%3Cclass %27pytorch_lightning.loggers.tensorboard.TensorBoardLogger%27&gt;" isContainer="True" />
+<var name="WandbLogger" type="ABCMeta" qualifier="abc" value="%3Cclass %27pytorch_lightning.loggers.wandb.WandbLogger%27&gt;" isContainer="True" />
+<var name="_exit_code" type="int" qualifier="builtins" value="0" />
+<var name="ax" type="Axes" qualifier="matplotlib.axes._axes" value="%3CAxes%3A title=%7B%27center%27%3A %27Label%3A 0%27%7D&gt;" isContainer="True" />
+<var name="axes" type="ndarray" qualifier="numpy" value="%5B%5B%3CAxes%3A title=%7B%27center%27%3A %27Label%3A 1%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 3%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 6%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 8%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 6%27%7D&gt;%5D%2C %5B%3CAxes%3A title=%7B%27center%27%3A %27Label%3A 8%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 5%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 7%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 8%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 0%27%7D&gt;%5D%5D" isContainer="True" shape="(2, 5)" />
+<var name="cnn_one_conv" type="CNNModel" qualifier="__main__" value="CNNModel%28%0A  %28conv1%29%3A Conv2d%281%2C 32%2C kernel_size=%283%2C 3%29%2C stride=%281%2C 1%29%2C padding=valid%29%0A  %28pool%29%3A MaxPool2d%28kernel_size=%282%2C 2%29%2C s...e%29%0A  %28fc1%29%3A Linear%28in_features=169%2C out_features=128%2C bias=True%29%0A  %28fc2%29%3A Linear%28in_features=128%2C out_features=10%2C bias=True%29%0A%29" isContainer="True" />
+<var name="fig" type="Figure" qualifier="matplotlib.figure" value="%3CFigure size 750x400 with 10 Axes&gt;" isContainer="True" />
+<var name="i" type="int" qualifier="builtins" value="9" />
+<var name="images" type="Tensor" qualifier="torch" value="tensor%28%5B%5B%5B%5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A...         %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%5D%5D%5D%29" isContainer="True" shape="(64, 1, 28, 28)" />
+<var name="kernel_size" type="tuple" qualifier="builtins" value="%283%2C 3%29" isContainer="True" shape="2" />
+<var name="labels" type="Tensor" qualifier="torch" value="tensor%28%5B1%2C 3%2C 6%2C 8%2C 6%2C 8%2C 5%2C 7%2C 8%2C 0%2C 1%2C 4%2C 6%2C 0%2C 6%2C 8%2C 7%2C 4%2C 3%2C 0%2C 4%2C 8%2C 4%2C 1%2C%0A        5%2C 7%2C 7%2C 1%2C 4%2C 6%2C 6%2C 1%2C 8%2C 9%2C 8%2C 0%2C 6%2C 2%2C 4%2C 2%2C 4%2C 9%2C 7%2C 1%2C 9%2C 7%2C 2%2C 3%2C%0A        6%2C 8%2C 5%2C 8%2C 4%2C 8%2C 6%2C 3%2C 6%2C 2%2C 8%2C 0%2C 3%2C 9%2C 2%2C 0%5D%29" isContainer="True" shape="(64,)" />
+<var name="mlp2_deep_sigmoid" type="MLP2" qualifier="__main__" value="MLP2%28%0A  %28layer1%29%3A Linear%28in_features=784%2C out_features=200%2C bias=True%29%0A  %28layer2%29%3A Linear%28in_features=200%2C out_features=100%2C b...eatures=60%2C out_features=30%2C bias=True%29%0A  %28layer5%29%3A Linear%28in_features=30%2C out_features=10%2C bias=True%29%0A  %28sigmoid%29%3A Sigmoid%28%29%0A%29" isContainer="True" />
+<var name="mlp3_deep_relu" type="MLP3" qualifier="__main__" value="MLP3%28%0A  %28layer1%29%3A Linear%28in_features=784%2C out_features=512%2C bias=True%29%0A  %28layer2%29%3A Linear%28in_features=512%2C out_features=256%2C b...%28in_features=128%2C out_features=64%2C bias=True%29%0A  %28layer5%29%3A Linear%28in_features=64%2C out_features=10%2C bias=True%29%0A  %28relu%29%3A ReLU%28%29%0A%29" isContainer="True" />
+<var name="mlp4_deep_relu_dropout" type="MLP4" qualifier="__main__" value="MLP4%28%0A  %28layer1%29%3A Linear%28in_features=784%2C out_features=200%2C bias=True%29%0A  %28layer2%29%3A Linear%28in_features=200%2C out_features=100%2C b...out1%29%3A Dropout%28p=0.2%2C inplace=False%29%0A  %28dropout2%29%3A Dropout%28p=0.15%2C inplace=False%29%0A  %28dropout3%29%3A Dropout%28p=0.1%2C inplace=False%29%0A%29" isContainer="True" />
+<var name="mnist_model" type="MNISTModel" qualifier="__main__" value="MNISTModel%28%0A  %28model%29%3A CNNModel%28%0A    %28conv1%29%3A Conv2d%281%2C 32%2C kernel_size=%283%2C 3%29%2C stride=%281%2C 1%29%2C padding=valid%29%0A    %28pool%29%3A MaxP...s=10%2C bias=True%29%0A  %29%0A  %28train_acc%29%3A MulticlassAccuracy%28%29%0A  %28val_acc%29%3A MulticlassAccuracy%28%29%0A  %28test_acc%29%3A MulticlassAccuracy%28%29%0A%29" isContainer="True" />
+<var name="nb_filters" type="int" qualifier="builtins" value="32" />
+<var name="num_col" type="int" qualifier="builtins" value="5" />
+<var name="num_row" type="int" qualifier="builtins" value="2" />
+<var name="pool_size" type="tuple" qualifier="builtins" value="%282%2C 2%29" isContainer="True" shape="2" />
+<var name="targets" type="Tensor" qualifier="torch" value="tensor%28%5B5%2C 0%2C 4%2C  ...%2C 5%2C 6%2C 8%5D%29" isContainer="True" shape="(60000,)" />
+<var name="test_ds" type="MNIST" qualifier="torchvision.datasets.mnist" value="Dataset MNIST%0A    Number of datapoints%3A 10000%0A    Root location%3A .%0A    Split%3A Test%0A    StandardTransform%0ATransform%3A Compose%28%0A               ToTensor%28%29%0A           %29" isContainer="True" shape="10000" />
+<var name="test_loader" type="DataLoader" qualifier="torch.utils.data.dataloader" value="%3Ctorch.utils.data.dataloader.DataLoader object at 0x0000020E7A55FD10&gt;" isContainer="True" shape="157" />
+<var name="train_ds" type="MNIST" qualifier="torchvision.datasets.mnist" value="Dataset MNIST%0A    Number of datapoints%3A 60000%0A    Root location%3A .%0A    Split%3A Train%0A    StandardTransform%0ATransform%3A Compose%28%0A               ToTensor%28%29%0A           %29" isContainer="True" shape="60000" />
+<var name="train_ds_subset" type="Subset" qualifier="torch.utils.data.dataset" value="%3Ctorch.utils.data.dataset.Subset object at 0x0000020E69234910&gt;" isContainer="True" shape="48000" />
+<var name="train_idx" type="ndarray" qualifier="numpy" value="%5B13259  1201 40980 24007 54618 50171  8103 34081 19043 20388 34889 35665%2C 41975 47466 13170 19906 54917 59599 16191 19012  7703 28503 39607 18174%2C  8263  2007  6600 11004 12935 32839 48066 12318 31528  4320 38324 49535%2C 30916 32155 53820 16404 48535 48182 13150 15182 52236 29363  4856 29231%2C 58370 34422  3685 31441 23713 17859 28890 11714 33178 16089 35847 41012%2C 51640 40391 15605 24627 25097 54442 28496 38376 53962 49600 25642 54305%2C 22205  6557 29041 34122 39579 36511 20067 50714 56204 27380 18598 23524%2C 37034  1397  2972 37902 28741 57971 41437 59753 27040 21691 29047 34443%2C 23514 46932  3832 29070 47568 51577 43422 30863 53994 33122  2555 57228%2C 18419 34959 36582 40883 56250 52689 24873 36230 38147 15013 51657  6837%2C 36467  9725 56306 40537  3064 54300 44727 53280 25842  6091 39605 20179%2C 56949 31626  8659 52988 54413  9322 40017 16502  1838 35848 45316 29053%2C 13212 19405 46038 10167 50846 38096 29853 59177 51066  1144  2355 30896%2C 23641 46735   324  8834 29097  3379 12403 42918 14..." isContainer="True" shape="(48000,)" />
+<var name="train_loader" type="DataLoader" qualifier="torch.utils.data.dataloader" value="%3Ctorch.utils.data.dataloader.DataLoader object at 0x0000020E7A55FE10&gt;" isContainer="True" shape="750" />
+<var name="trainer" type="Trainer" qualifier="pytorch_lightning.trainer.trainer" value="%3Cpytorch_lightning.trainer.trainer.Trainer object at 0x0000020E80E316D0&gt;" isContainer="True" />
+<var name="transform" type="Compose" qualifier="torchvision.transforms.transforms" value="Compose%28%0A    ToTensor%28%29%0A%29" isContainer="True" />
+<var name="val_ds" type="Subset" qualifier="torch.utils.data.dataset" value="%3Ctorch.utils.data.dataset.Subset object at 0x0000020E695DF750&gt;" isContainer="True" shape="12000" />
+<var name="val_loader" type="DataLoader" qualifier="torch.utils.data.dataloader" value="%3Ctorch.utils.data.dataloader.DataLoader object at 0x0000020E67FFA050&gt;" isContainer="True" shape="188" />
+<var name="valid_idx" type="ndarray" qualifier="numpy" value="%5B11488  4458 10998 50766 59570 53217 49827 52957 51704 31068 50156 53529%2C 24837 32359 41616 45148 19709 14492 23081 41473 36718 28334 46811 13845%2C 10128 17435 52369 36441 53314  1684  8730 12160 27269  9538 54267 23857%2C 52099 31401 35306 25969 13648  6915 35778 42789 13398 31177 56644 26280%2C 31301 46634 28085 10767 33298 18040 11605 58115 58390  6739 11263 22388%2C 15141 19143 14783  1720 30935  4126 58815 52758 15251 18699 19514 59283%2C 51226 57052 24660  8118 44177 11889 24298 55805 42516 43610 58881 59983%2C 55603 58934 23203 42326 18929 40080 57089  4193 35980  9168 27838 55796%2C 18124 19607 57393 44167 55880  6962 45276 14501 32638 10238  7097 12029%2C 33335 45519 37375 39832  4704  5063 57586  1150 11604  1928 28561 34891%2C 53313 36573 43303 46428 59336 46676 17178 19732 11409 39942 21458   425%2C 17938 23719 44494 27367 47534 47148  4911 41748 57918 36284 58221 26773%2C 51906 51692 36330 22612 17317 32532 47968 18452 45652 38246 33934 27501%2C 48959 10883  8247 29368 47454  9701 57309 38275 54..." isContainer="True" shape="(12000,)" />
+<var name="wandb_logger" type="WandbLogger" qualifier="pytorch_lightning.loggers.wandb" value="%3Cpytorch_lightning.loggers.wandb.WandbLogger object at 0x0000020E80EC6E10&gt;" isContainer="True" />
+</xml>
+Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+HPU available: False, using: 0 HPUs
+C:\Users\maxim\OneDrive\Documents\UMONS\BAB3\Q2 - Intelligence Artificielle\.venv\Lib\site-packages\pytorch_lightning\loggers\wandb.py:397: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+C:\Users\maxim\OneDrive\Documents\UMONS\BAB3\Q2 - Intelligence Artificielle\.venv\Lib\site-packages\pytorch_lightning\utilities\model_summary\model_summary.py:477: The total number of parameters detected may be inaccurate because the model contains an instance of `UninitializedParameter`. To get an accurate number, set `self.example_input_array` in your LightningModule.
+
+  | Name      | Type               | Params | Mode
+---------------------------------------------------------
+0 | model     | CNNModel           | 320    | train
+1 | train_acc | MulticlassAccuracy | 0      | train
+2 | val_acc   | MulticlassAccuracy | 0      | train
+3 | test_acc  | MulticlassAccuracy | 0      | train
+---------------------------------------------------------
+320       Trainable params
+0         Non-trainable params
+320       Total params
+0.001     Total estimated model params size (MB)
+8         Modules in train mode
+0         Modules in eval mode
+`Trainer.fit` stopped: `max_epochs=20` reached.
+<xml><var name="_dummy_ipython_val"  />
+<var name="_dummy_special_var"  />
+<var name="ACCELERATOR" type="str" qualifier="builtins" value="auto" />
+<var name="Accuracy" type="ABCMeta" qualifier="abc" value="%3Cclass %27torchmetrics.classification.accuracy.Accuracy%27&gt;" isContainer="True" />
+<var name="BATCH_SIZE" type="int" qualifier="builtins" value="64" />
+<var name="CSVLogger" type="ABCMeta" qualifier="abc" value="%3Cclass %27pytorch_lightning.loggers.csv_logs.CSVLogger%27&gt;" isContainer="True" />
+<var name="DATA_DIR" type="str" qualifier="builtins" value="." />
+<var name="EPOCHS" type="int" qualifier="builtins" value="20" />
+<var name="LOG_DIR" type="str" qualifier="builtins" value="logs/" />
+<var name="LR" type="NoneType" qualifier="builtins" value="None" />
+<var name="MulticlassAccuracy" type="ABCMeta" qualifier="abc" value="%3Cclass %27torchmetrics.classification.accuracy.MulticlassAccuracy%27&gt;" isContainer="True" />
+<var name="MulticlassConfusionMatrix" type="ABCMeta" qualifier="abc" value="%3Cclass %27torchmetrics.classification.confusion_matrix.MulticlassConfusionMatrix%27&gt;" isContainer="True" />
+<var name="NUM_CLASSES" type="int" qualifier="builtins" value="10" />
+<var name="TensorBoardLogger" type="ABCMeta" qualifier="abc" value="%3Cclass %27pytorch_lightning.loggers.tensorboard.TensorBoardLogger%27&gt;" isContainer="True" />
+<var name="WandbLogger" type="ABCMeta" qualifier="abc" value="%3Cclass %27pytorch_lightning.loggers.wandb.WandbLogger%27&gt;" isContainer="True" />
+<var name="_exit_code" type="int" qualifier="builtins" value="0" />
+<var name="ax" type="Axes" qualifier="matplotlib.axes._axes" value="%3CAxes%3A title=%7B%27center%27%3A %27Label%3A 0%27%7D&gt;" isContainer="True" />
+<var name="axes" type="ndarray" qualifier="numpy" value="%5B%5B%3CAxes%3A title=%7B%27center%27%3A %27Label%3A 1%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 3%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 6%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 8%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 6%27%7D&gt;%5D%2C %5B%3CAxes%3A title=%7B%27center%27%3A %27Label%3A 8%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 5%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 7%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 8%27%7D&gt;%2C  %3CAxes%3A title=%7B%27center%27%3A %27Label%3A 0%27%7D&gt;%5D%5D" isContainer="True" shape="(2, 5)" />
+<var name="cnn_one_conv" type="CNNModel" qualifier="__main__" value="CNNModel%28%0A  %28conv1%29%3A Conv2d%281%2C 32%2C kernel_size=%283%2C 3%29%2C stride=%281%2C 1%29%2C padding=valid%29%0A  %28pool%29%3A MaxPool2d%28kernel_size=%282%2C 2%29%2C s...%29%0A  %28fc1%29%3A Linear%28in_features=5408%2C out_features=128%2C bias=True%29%0A  %28fc2%29%3A Linear%28in_features=128%2C out_features=10%2C bias=True%29%0A%29" isContainer="True" />
+<var name="fig" type="Figure" qualifier="matplotlib.figure" value="%3CFigure size 750x400 with 10 Axes&gt;" isContainer="True" />
+<var name="i" type="int" qualifier="builtins" value="9" />
+<var name="images" type="Tensor" qualifier="torch" value="tensor%28%5B%5B%5B%5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A...         %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%2C%0A          %5B0.%2C 0.%2C 0.%2C  ...%2C 0.%2C 0.%2C 0.%5D%5D%5D%5D%29" isContainer="True" shape="(64, 1, 28, 28)" />
+<var name="kernel_size" type="tuple" qualifier="builtins" value="%283%2C 3%29" isContainer="True" shape="2" />
+<var name="labels" type="Tensor" qualifier="torch" value="tensor%28%5B1%2C 3%2C 6%2C 8%2C 6%2C 8%2C 5%2C 7%2C 8%2C 0%2C 1%2C 4%2C 6%2C 0%2C 6%2C 8%2C 7%2C 4%2C 3%2C 0%2C 4%2C 8%2C 4%2C 1%2C%0A        5%2C 7%2C 7%2C 1%2C 4%2C 6%2C 6%2C 1%2C 8%2C 9%2C 8%2C 0%2C 6%2C 2%2C 4%2C 2%2C 4%2C 9%2C 7%2C 1%2C 9%2C 7%2C 2%2C 3%2C%0A        6%2C 8%2C 5%2C 8%2C 4%2C 8%2C 6%2C 3%2C 6%2C 2%2C 8%2C 0%2C 3%2C 9%2C 2%2C 0%5D%29" isContainer="True" shape="(64,)" />
+<var name="mlp2_deep_sigmoid" type="MLP2" qualifier="__main__" value="MLP2%28%0A  %28layer1%29%3A Linear%28in_features=784%2C out_features=200%2C bias=True%29%0A  %28layer2%29%3A Linear%28in_features=200%2C out_features=100%2C b...eatures=60%2C out_features=30%2C bias=True%29%0A  %28layer5%29%3A Linear%28in_features=30%2C out_features=10%2C bias=True%29%0A  %28sigmoid%29%3A Sigmoid%28%29%0A%29" isContainer="True" />
+<var name="mlp3_deep_relu" type="MLP3" qualifier="__main__" value="MLP3%28%0A  %28layer1%29%3A Linear%28in_features=784%2C out_features=512%2C bias=True%29%0A  %28layer2%29%3A Linear%28in_features=512%2C out_features=256%2C b...%28in_features=128%2C out_features=64%2C bias=True%29%0A  %28layer5%29%3A Linear%28in_features=64%2C out_features=10%2C bias=True%29%0A  %28relu%29%3A ReLU%28%29%0A%29" isContainer="True" />
+<var name="mlp4_deep_relu_dropout" type="MLP4" qualifier="__main__" value="MLP4%28%0A  %28layer1%29%3A Linear%28in_features=784%2C out_features=200%2C bias=True%29%0A  %28layer2%29%3A Linear%28in_features=200%2C out_features=100%2C b...out1%29%3A Dropout%28p=0.2%2C inplace=False%29%0A  %28dropout2%29%3A Dropout%28p=0.15%2C inplace=False%29%0A  %28dropout3%29%3A Dropout%28p=0.1%2C inplace=False%29%0A%29" isContainer="True" />
+<var name="mnist_model" type="MNISTModel" qualifier="__main__" value="MNISTModel%28%0A  %28model%29%3A CNNModel%28%0A    %28conv1%29%3A Conv2d%281%2C 32%2C kernel_size=%283%2C 3%29%2C stride=%281%2C 1%29%2C padding=valid%29%0A    %28pool%29%3A MaxP...s=10%2C bias=True%29%0A  %29%0A  %28train_acc%29%3A MulticlassAccuracy%28%29%0A  %28val_acc%29%3A MulticlassAccuracy%28%29%0A  %28test_acc%29%3A MulticlassAccuracy%28%29%0A%29" isContainer="True" />
+<var name="nb_filters" type="int" qualifier="builtins" value="32" />
+<var name="num_col" type="int" qualifier="builtins" value="5" />
+<var name="num_row" type="int" qualifier="builtins" value="2" />
+<var name="pool_size" type="tuple" qualifier="builtins" value="%282%2C 2%29" isContainer="True" shape="2" />
+<var name="targets" type="Tensor" qualifier="torch" value="tensor%28%5B5%2C 0%2C 4%2C  ...%2C 5%2C 6%2C 8%5D%29" isContainer="True" shape="(60000,)" />
+<var name="test_ds" type="MNIST" qualifier="torchvision.datasets.mnist" value="Dataset MNIST%0A    Number of datapoints%3A 10000%0A    Root location%3A .%0A    Split%3A Test%0A    StandardTransform%0ATransform%3A Compose%28%0A               ToTensor%28%29%0A           %29" isContainer="True" shape="10000" />
+<var name="test_loader" type="DataLoader" qualifier="torch.utils.data.dataloader" value="%3Ctorch.utils.data.dataloader.DataLoader object at 0x0000020E7A55FD10&gt;" isContainer="True" shape="157" />
+<var name="train_ds" type="MNIST" qualifier="torchvision.datasets.mnist" value="Dataset MNIST%0A    Number of datapoints%3A 60000%0A    Root location%3A .%0A    Split%3A Train%0A    StandardTransform%0ATransform%3A Compose%28%0A               ToTensor%28%29%0A           %29" isContainer="True" shape="60000" />
+<var name="train_ds_subset" type="Subset" qualifier="torch.utils.data.dataset" value="%3Ctorch.utils.data.dataset.Subset object at 0x0000020E69234910&gt;" isContainer="True" shape="48000" />
+<var name="train_idx" type="ndarray" qualifier="numpy" value="%5B13259  1201 40980 24007 54618 50171  8103 34081 19043 20388 34889 35665%2C 41975 47466 13170 19906 54917 59599 16191 19012  7703 28503 39607 18174%2C  8263  2007  6600 11004 12935 32839 48066 12318 31528  4320 38324 49535%2C 30916 32155 53820 16404 48535 48182 13150 15182 52236 29363  4856 29231%2C 58370 34422  3685 31441 23713 17859 28890 11714 33178 16089 35847 41012%2C 51640 40391 15605 24627 25097 54442 28496 38376 53962 49600 25642 54305%2C 22205  6557 29041 34122 39579 36511 20067 50714 56204 27380 18598 23524%2C 37034  1397  2972 37902 28741 57971 41437 59753 27040 21691 29047 34443%2C 23514 46932  3832 29070 47568 51577 43422 30863 53994 33122  2555 57228%2C 18419 34959 36582 40883 56250 52689 24873 36230 38147 15013 51657  6837%2C 36467  9725 56306 40537  3064 54300 44727 53280 25842  6091 39605 20179%2C 56949 31626  8659 52988 54413  9322 40017 16502  1838 35848 45316 29053%2C 13212 19405 46038 10167 50846 38096 29853 59177 51066  1144  2355 30896%2C 23641 46735   324  8834 29097  3379 12403 42918 14..." isContainer="True" shape="(48000,)" />
+<var name="train_loader" type="DataLoader" qualifier="torch.utils.data.dataloader" value="%3Ctorch.utils.data.dataloader.DataLoader object at 0x0000020E7A55FE10&gt;" isContainer="True" shape="750" />
+<var name="trainer" type="Trainer" qualifier="pytorch_lightning.trainer.trainer" value="%3Cpytorch_lightning.trainer.trainer.Trainer object at 0x0000020E80EA5810&gt;" isContainer="True" />
+<var name="transform" type="Compose" qualifier="torchvision.transforms.transforms" value="Compose%28%0A    ToTensor%28%29%0A%29" isContainer="True" />
+<var name="val_ds" type="Subset" qualifier="torch.utils.data.dataset" value="%3Ctorch.utils.data.dataset.Subset object at 0x0000020E695DF750&gt;" isContainer="True" shape="12000" />
+<var name="val_loader" type="DataLoader" qualifier="torch.utils.data.dataloader" value="%3Ctorch.utils.data.dataloader.DataLoader object at 0x0000020E67FFA050&gt;" isContainer="True" shape="188" />
+<var name="valid_idx" type="ndarray" qualifier="numpy" value="%5B11488  4458 10998 50766 59570 53217 49827 52957 51704 31068 50156 53529%2C 24837 32359 41616 45148 19709 14492 23081 41473 36718 28334 46811 13845%2C 10128 17435 52369 36441 53314  1684  8730 12160 27269  9538 54267 23857%2C 52099 31401 35306 25969 13648  6915 35778 42789 13398 31177 56644 26280%2C 31301 46634 28085 10767 33298 18040 11605 58115 58390  6739 11263 22388%2C 15141 19143 14783  1720 30935  4126 58815 52758 15251 18699 19514 59283%2C 51226 57052 24660  8118 44177 11889 24298 55805 42516 43610 58881 59983%2C 55603 58934 23203 42326 18929 40080 57089  4193 35980  9168 27838 55796%2C 18124 19607 57393 44167 55880  6962 45276 14501 32638 10238  7097 12029%2C 33335 45519 37375 39832  4704  5063 57586  1150 11604  1928 28561 34891%2C 53313 36573 43303 46428 59336 46676 17178 19732 11409 39942 21458   425%2C 17938 23719 44494 27367 47534 47148  4911 41748 57918 36284 58221 26773%2C 51906 51692 36330 22612 17317 32532 47968 18452 45652 38246 33934 27501%2C 48959 10883  8247 29368 47454  9701 57309 38275 54..." isContainer="True" shape="(12000,)" />
+<var name="wandb_logger" type="WandbLogger" qualifier="pytorch_lightning.loggers.wandb" value="%3Cpytorch_lightning.loggers.wandb.WandbLogger object at 0x0000020E80EC4A10&gt;" isContainer="True" />
+</xml>
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       Test metric             DataLoader 0
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+        test_acc             0.982903242111206
+        test_loss          0.053389325737953186
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────

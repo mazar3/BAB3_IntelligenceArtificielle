@@ -1,0 +1,40 @@
+{
+  "os":  "Windows-10-10.0.26100-SP0",
+  "python":  "CPython 3.11.9",
+  "startedAt":  "2025-03-06T09:57:16.633102Z",
+  "program":  "Travaux Pratiques/TP 4 - MLP et CNN pour la classification d’images/tp4.ipynb",
+  "git":  {
+    "remote":  "https://github.com/mazar3/BAB3_IntelligenceArtificielle.git",
+    "commit":  "f92ac8b2ace37c8337ed2a16150bc1401b70ab61"
+  },
+  "email":  "maximilien003@gmail.com",
+  "root":  ".",
+  "host":  "MAZAR-DESKTOP",
+  "executable":  "C:\\Users\\maxim\\OneDrive\\Documents\\UMONS\\BAB3\\Q2 - Intelligence Artificielle\\.venv\\Scripts\\python.exe",
+  "cpu_count":  8,
+  "cpu_count_logical":  16,
+  "gpu":  "NVIDIA GeForce RTX 3070",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "499199766528",
+      "used":  "436603473920"
+    }
+  },
+  "memory":  {
+    "total":  "34280464384"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  16
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA GeForce RTX 3070",
+      "memoryTotal":  "8589934592",
+      "cudaCores":  5888,
+      "architecture":  "Ampere"
+    }
+  ],
+  "cudaVersion":  "12.8"
+}
